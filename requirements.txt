@@ -3,7 +3,8 @@ joblib==1.5.1
 numpy==2.3.0
 pandas==2.3.0
 gunicorn==23.0.0
-catboost==1.2.5
+catboost==1.2.3
+
 
 
 
