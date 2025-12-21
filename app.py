@@ -20,7 +20,7 @@ def predict():
     try:
         # Extract form inputs from the HTML form
         data = [
-            float(reqm['bedrooms']),
+            float(request.form['bedrooms']),
             float(request.form['bathrooms']),
             float(request.form['living_area']),
             float(request.form['lot_area']),
@@ -87,3 +87,4 @@ def predict():
 
 if __name__ == '__main__':
     app.run(debug=False)
+
