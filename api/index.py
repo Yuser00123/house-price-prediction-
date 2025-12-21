@@ -5,11 +5,11 @@ import numpy as np
 import pandas as pd
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='../templates', static_folder='../static')
 
 #uest.for Load the trained model and the scaler (from pipeline) and the lambda_
-model = joblib.load(os.path.join("model", "best_model.joblib"))
-scaler = joblib.load(os.path.join("model", "StandardScaler.joblib"))
+model = joblib.load(os.path.join("../model", "best_model.joblib"))
+scaler = joblib.load(os.path.join("../model", "StandardScaler.joblib"))
 
 @app.route('/')
 def index():
@@ -87,4 +87,5 @@ def predict():
 
 if __name__ == '__main__':
     app.run(debug=False)
+
 
